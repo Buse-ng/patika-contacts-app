@@ -10,10 +10,10 @@ function Contacts() {
   }, [contacts]);
 
   return (
-    <>
-      <ContactList />
+    <div>
       <ContactForm addContacts={setContacts} contacts={contacts} />
-    </>
+      <ContactList contacts={contacts} />
+    </div>
   );
 }
 export default Contacts;
