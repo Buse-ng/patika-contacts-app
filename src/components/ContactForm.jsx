@@ -25,14 +25,15 @@ const ContactForm = ({addContacts, contacts}) => {
   return (
     <form 
         onSubmit={onSubmit}
-        className="flex flex-col justify-center items-center gap-y-6"
+        className="flex flex-col gap-y-6"
     >
-      <div className="mt-6">
-        <input 
-            name="fullname" 
-            placeholder="Fullname" 
-            value={form.fullname}
-            onChange={onChangeInput}
+      <div className="">
+        <input
+          name="fullname" 
+          placeholder="Full Name" 
+          value={form.fullname}
+          onChange={onChangeInput}
+          className="w-full box-border p-2 rounded-lg"
         />
       </div>
       
@@ -42,12 +43,11 @@ const ContactForm = ({addContacts, contacts}) => {
             placeholder="Phone Number"
             value={form.phoneNumber}
             onChange={onChangeInput}
+            className="w-full box-border p-2 rounded-lg"
         />
       </div>
 
-      <div className="bg-gray-300">
-        <button>Add</button>
-      </div>
+      <button className="bg-amber-300 hover:bg-orange-300 cursor-pointer rounded-lg p-1 w-28 font-semibold text-gray-500 hover:text-slate-500">Add</button>
     </form>
   );
 };
