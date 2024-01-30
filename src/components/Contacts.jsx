@@ -9,6 +9,8 @@ function Contacts() {
     console.log(contacts);
   }, [contacts]);
 
+  
+
   return (
     <div>
       <ContactForm addContacts={setContacts} contacts={contacts} />
