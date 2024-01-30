@@ -1,15 +1,16 @@
 import React, {useEffect, useState} from "react";
 
+const initialFormValues = { fullname: "", phoneNumber: "" };
+
 const ContactForm = ({addContacts, contacts}) => {
-    const initialFormValues = { fullname: "", phoneNumber: "" };
     const [form, setForm] = useState( initialFormValues );
 
     // Effect to reset the form when contacts change
-    useEffect(()=>{
+    useEffect(() => {
       setForm(initialFormValues)
     }, [contacts])
     
-    const onChangeInput=(e)=>{
+    const onChangeInput = (e) => {
       setForm({...form, [e.target.name]: e.target.value });
     }
     
